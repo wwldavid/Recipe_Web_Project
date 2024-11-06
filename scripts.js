@@ -194,7 +194,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    const response = await fetch("../recipes.json");
+    const response = await fetch("recipes.json");
     const recipes = await response.json();
 
     dropdownMenu.innerHTML = "";
