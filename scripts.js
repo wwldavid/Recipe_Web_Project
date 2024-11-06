@@ -8,11 +8,12 @@ document.getElementById("nav-toggle").addEventListener("click", function () {
   navRightPart.classList.toggle("show");
 
   if (
-    navLinks.classList.contains("show") ||
-    navRightPart.classList.contains("show")
+    (navLinks.classList.contains("show") ||
+      navRightPart.classList.contains("show")) &&
+    recipePage
   ) {
     recipePage.style.marginTop = "16rem";
-  } else {
+  } else if (recipePage) {
     recipePage.style.marginTop = "0";
   }
 });
@@ -37,13 +38,13 @@ function showIngredients(ingredients) {
   return ingredients
     .map(
       (ingredient) => `
-     <div class="ingredient">
+          <div class="ingredient">
             <li>
               <span class="ingredient-item">${ingredient.item}</span>
               <span class="ingredient-amount">${ingredient.amount}</span>
               <span class="ingredient-unit">${ingredient.unit}</span>
-            </li>
-     </div>  
+            </li> 
+          </div>
     `
     )
     .join("");
