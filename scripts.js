@@ -39,11 +39,9 @@ function showIngredients(ingredients) {
     .map(
       (ingredient) => `
           <div class="ingredient">
-            <li>
-              <span class="ingredient-item">${ingredient.item}</span>
-              <span class="ingredient-amount">${ingredient.amount}</span>
-              <span class="ingredient-unit">${ingredient.unit}</span>
-            </li> 
+              <div class="ingredient-item">${ingredient.item}</div>
+              <div class="ingredient-amount">${ingredient.amount}</div>
+              <div class="ingredient-unit">${ingredient.unit}</div>
           </div>
     `
     )
@@ -83,7 +81,7 @@ function showRecipe(recipe) {
   article.append(nameElement, categoryElement, descriptionElement);
   recipeDetails.appendChild(article);
 
-  //创建按钮容器
+  //create container for buttons
   const buttonContainer = document.createElement("div");
   buttonContainer.className = "button-container";
 
