@@ -227,10 +227,16 @@ h4 {
 .ingredient-amount,
 .ingredient-unit {
   font-weight: 500;
-  color: #333;
+}
+.ingredient-item {
+  color: #556B2F;
 }
 .ingredient-amount {
   text-align: left;
+  color: #4682B4;
+}
+.ingredient-unit {
+  color: #708090;
 }
 .recipe-icons h5,
 .recipe-icons p,
