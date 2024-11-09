@@ -114,7 +114,7 @@ body {
   max-width: 98%;
   margin: 0 auto;
 }
-.recipe-hero {
+.front-section {
   display: grid;
   gap: 0;
 }
@@ -170,21 +170,17 @@ body {
   box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.4);
 }
 .button-container button:hover {
-  background-color: #e76f51;
-}
-.button-container button:active {
   background-color: #d35400;
 }
-
 .recipe-info p {
   color: #666;
 }
 .recipe-icons,
 .recipe-nutrition {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+  display: flex;
+  justify-content: space-around;
   text-align: center;
+  align-items: center;
 }
 .recipe-icons i {
   font-size: 1.7rem;
@@ -269,7 +265,7 @@ h4 {
   margin: 0 0.5rem;
   text-transform: capitalize;
 }
-.recipe-content {
+.back-section {
   padding: 3rem 3rem;
   display: grid;
   gap: 2rem 5rem;
@@ -385,7 +381,7 @@ h4 {
   .nav-btn {
     display: none;
   }
-  .recipe-hero {
+  .front-section {
     grid-template-columns: 4fr 5fr;
     align-items:center;
   }
@@ -393,7 +389,7 @@ h4 {
     width: 90%;
     margin-top: 3rem;
   }
-  .recipe-content {
+  .back-section {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -401,7 +397,7 @@ h4 {
 .nav-btn {
   display: none;
 }
-.recipe-hero {
+.front-section {
   grid-template-columns: 4fr 5fr;
   align-items:center;
 }
@@ -409,7 +405,7 @@ h4 {
   width: 80%;
   margin-top: 3rem;
 }
-.recipe-content {
+.back-section {
   grid-template-columns: 1fr 1fr;
 }
 }
@@ -417,7 +413,7 @@ h4 {
   .nav-btn {
     display: none;
   }
-  .recipe-hero {
+  .front-section {
     grid-template-columns: 4fr 5fr;
     align-items:center;
   }
@@ -425,7 +421,7 @@ h4 {
     width: 80%;
     margin-top: 3rem;
   }
-  .recipe-content {
+  .back-section {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -433,7 +429,7 @@ h4 {
   .nav-btn {
     display: none;
   }
-  .recipe-hero {
+  .front-section {
     grid-template-columns: 4fr 5fr;
     align-items:center;
   }
@@ -441,7 +437,7 @@ h4 {
     width: 80%;
     margin-top: 3rem;
   }
-  .recipe-content {
+  .back-section {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -449,7 +445,7 @@ h4 {
   .nav-btn {
     display: none;
   }
-  .recipe-hero {
+  .front-section {
     grid-template-columns: 4fr 5fr;
     align-items:center;
   }
@@ -457,7 +453,7 @@ h4 {
     width: 80%;
     margin-top: 3rem;
   }
-  .recipe-content {
+  .back-section {
     grid-template-columns: 1fr 1fr;
   }
 }

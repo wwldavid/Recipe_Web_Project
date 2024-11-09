@@ -24,8 +24,8 @@ function showInstructions(instructions) {
       (instr) => `
     <div class="instruc"> 
       <header>
-      <p>step ${instr.step}</p>
-      <div></div>
+         <p>step ${instr.step}</p>
+         <div></div>
       </header>
       <p>${instr.text}</p>
     </div>
@@ -49,21 +49,22 @@ function showIngredients(ingredients) {
 }
 
 function showRecipe(recipe) {
+  const navBar = document.querySelector(".topbar");
   let recipePage = document.querySelector(".recipe-page");
   if (!recipePage) {
     recipePage = document.createElement("div");
     recipePage.className = "recipe-page";
-    document.body.appendChild(recipePage);
+    document.body.insertBefore(recipePage, navBar.nextSbling);
   }
   recipePage.innerHTML = "";
-  const recipeHero = document.createElement("section");
-  recipeHero.className = "recipe-hero";
+  const frontSection = document.createElement("section");
+  frontSection.className = "front-section";
 
   const recipeImage = document.createElement("img");
   recipeImage.src = recipe.image;
   recipeImage.className = "img recipe-hero-img";
   recipeImage.alt = recipe.name;
-  recipeHero.appendChild(recipeImage);
+  frontSection.appendChild(recipeImage);
 
   const recipeDetails = document.createElement("div");
   recipeDetails.className = "recipe-details";
@@ -140,11 +141,11 @@ function showRecipe(recipe) {
 
   nutritionFacts.appendChild(nutritionContainer);
   recipeDetails.appendChild(nutritionFacts);
-  recipeHero.appendChild(recipeDetails);
-  recipePage.appendChild(recipeHero);
+  frontSection.appendChild(recipeDetails);
+  recipePage.appendChild(frontSection);
 
-  const recipeContent = document.createElement("section");
-  recipeContent.className = "recipe-content";
+  const backSection = document.createElement("section");
+  backSection.className = "back-section";
 
   const instructions = document.createElement("article");
   instructions.className = "instructions";
@@ -152,7 +153,7 @@ function showRecipe(recipe) {
   instructionsTitle.textContent = "Instructions";
   instructions.appendChild(instructionsTitle);
   instructions.innerHTML += showInstructions(recipe.instructions);
-  recipeContent.appendChild(instructions);
+  backSection.appendChild(instructions);
 
   const recipeInfoSection = document.createElement("article");
   recipeInfoSection.className = "recipe-info-section";
@@ -171,8 +172,8 @@ function showRecipe(recipe) {
   recipeTags.innerHTML = `Tags: ${tagsHTML}`;
   recipeInfoSection.appendChild(recipeTags);
 
-  recipeContent.appendChild(recipeInfoSection);
-  recipePage.appendChild(recipeContent);
+  backSection.appendChild(recipeInfoSection);
+  recipePage.appendChild(backSection);
 
   document.getElementById("dropdown-menu").style.display = "none";
 
@@ -210,7 +211,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-//change time format if over 60 min
+//change time format if over 60
 function showTime() {
   document.querySelectorAll(".recipe-icons article p").forEach((duration) => {
     const text = duration.textContent;
