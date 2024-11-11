@@ -8,11 +8,11 @@ body {
 h4 {
   font-size: 2rem;
   font-weight: 500;
-  color: #333;
+  color: #222;
   margin-bottom: 1.5rem;
 }
 p {
-  color: #666;
+  color: #555;
 }
 .topbar {
   height: 7rem;
@@ -39,20 +39,18 @@ p {
   width: 25.6rem;
   margin-right: 4rem;
   font-size: 2em;
-  color: #ff461f;
   text-align: center;
   font-weight: bold;
   letter-spacing: 0.1rem;
   text-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
-  background: linear-gradient(45deg, #ff8c1a, #ff461f);
+  background: linear-gradient(45deg, #ff5722, #ffeb3b);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
 .nav-logo:hover{
-  color: #ffa07a;
+  color: #ff9800;
   text-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
   transform:scale(1.05);
-  transition: all 0.3s ease;
 }
 .nav-links {
   position: relative;
@@ -66,6 +64,7 @@ p {
   cursor: pointer; 
   box-shadow: 0.1rem 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
   transition: background-color 0.3s;
+  border:2px solid #333;
 }
 .btn:hover {
   background-color: #504acc;
@@ -145,16 +144,17 @@ p {
 .cuisine-name {
   font-size: 3rem;
   font-weight: 600;
-  color: #ff7500 ;
+  color: #d35400; 
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); 
 }
-
 .cuisine-cat {
   font-size: 2rem;
-  color: #789262;
+  color: #6a0dad; 
 }
-.description{
+.description {
   font-size: 2rem;
-  color:#ffa631;
+  color: #2d98da; 
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); 
 }
 .button-container {
   display: flex;
@@ -166,7 +166,7 @@ p {
   width: 15rem;
   padding: 0.5rem 1rem;
   border-radius: 5px;
-  background:linear-gradient(145deg, #66bb6a, #388e3c);
+  background:linear-gradient(145deg, #007acc, #005f9e);
   color: white;
   font-weight: bold;
   cursor: pointer;
@@ -174,10 +174,8 @@ p {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 .button-container button:hover {
-  box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.4);
-}
-.button-container button:hover {
-  background-color: #d35400;
+  background: #ff7f50!important;
+  box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.4)!important;
 }
 .recipe-icons,
 .recipe-nutrition {
@@ -192,7 +190,7 @@ p {
 .quick-facts,
 .nutrition-facts,
 .ingredient {
-  background-color: #f9f9f9; 
+  background-color: #f0f0f0; 
   box-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.1); 
 }
 .ingredients{
@@ -214,14 +212,14 @@ p {
   font-weight: 500;
 }
 .ingredient-item {
-  color: #556B2F;
+  color: #6a0dad;
 }
 .ingredient-amount {
   text-align: left;
-  color: #4682B4;
+  color: #006994;
 }
 .ingredient-unit {
-  color: #708090;
+  color: #5d5d5d;
 }
 .recipe-icons h5,
 .recipe-icons p,
@@ -244,12 +242,13 @@ p {
   margin-top: 2rem;
 }
 .recipe-tags a {
-  background: #db5a6b;
+  background: #ff9900;
   border-radius: 0.25rem;
   color: white;
   padding: 0.05rem 0.5rem;
   margin: 0 0.5rem;
   text-transform: capitalize;
+  border: 2px solid #fff;
 }
 .back-section {
   padding: 3rem 3rem;
@@ -271,7 +270,7 @@ p {
   text-transform: uppercase;
   font-weight: 600;
   margin-bottom: 0;
-  color: #5e8b39;
+  color: #004080;
   font-size: 1.5rem;
  }
  .instruc > p {
