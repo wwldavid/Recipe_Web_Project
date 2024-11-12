@@ -82,18 +82,15 @@ function showRecipe(recipe) {
   article.append(nameElement, categoryElement, descriptionElement);
   recipeDetails.appendChild(article);
 
-  //create container for buttons
   const buttonContainer = document.createElement("div");
   buttonContainer.className = "button-container";
 
-  // Double Serving button
   const doubServButton = document.createElement("button");
   doubServButton.id = "double-servings";
   doubServButton.textContent = "Double Servings";
   doubServButton.onclick = toggleServings;
   buttonContainer.appendChild(doubServButton);
 
-  // unit-convert button
   const unitButton = document.createElement("button");
   unitButton.id = "convert-units";
   unitButton.textContent = "Convert to Imperial";
