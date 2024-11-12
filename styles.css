@@ -179,10 +179,20 @@ p {
   justify-content: space-around;
   text-align: center;
 }
-.recipe-icons i {
+.recipe-icons i,
+.recipe-nutrition i {
   font-size: 1.7rem;
-  color: #4c8dae;
 }
+.prep-icon {color:#e76f51;}
+.cook-icon {color:#f4a261;}
+.servings-icon {color:#2a9d8f;}
+.difficulty-icon {color:#264653;}
+
+.calory-icon {color: #e63946;}
+.protein-icon {color: #3366cc;}
+.carbo-icon {color: #f4a261;}
+.fat-icon {color: #ffad33;}
+
 .quick-facts,
 .nutrition-facts,
 .ingredient {
@@ -221,10 +231,6 @@ p {
 .nutrition-item p{
   margin-bottom: 0;
   font-size: 1.5rem;
-}
-.recipe-nutrition i {
-  font-size: 1.7rem;
-  color: #f9906f; 
 }
 .recipe-tags {
   display: flex;

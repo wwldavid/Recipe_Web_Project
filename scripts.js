@@ -54,7 +54,7 @@ function showRecipe(recipe) {
   if (!recipePage) {
     recipePage = document.createElement("div");
     recipePage.className = "recipe-page";
-    document.body.insertBefore(recipePage, navBar.nextSbling);
+    document.body.insertBefore(recipePage, navBar.nextSibling);
   }
   recipePage.innerHTML = "";
   const frontSection = document.createElement("section");
@@ -109,10 +109,10 @@ function showRecipe(recipe) {
   recipeIcons.className = "recipe-icons";
   recipeIcons.innerHTML = `
     
-      <article><i class="fas fa-clock"></i><h5>prep time</h5><p>${recipe.prepTime} min.</p></article>
-      <article><i class="far fa-clock"></i><h5>cook time</h5><p>${recipe.cookTime} min.</p></article>
-      <article><i class="fas fa-user-friends"></i><h5>servings</h5><p id="servings">${recipe.servings}</p></article>
-      <article><i class="fas fa-tasks"></i><h5>difficulty</h5><p>${recipe.difficulty}</p></article>
+      <article><i class="fas fa-clock prep-icon"></i><h5>prep time</h5><p>${recipe.prepTime} min.</p></article>
+      <article><i class="far fa-clock cook-icon"></i><h5>cook time</h5><p>${recipe.cookTime} min.</p></article>
+      <article><i class="fas fa-user-friends servings-icon"></i><h5>servings</h5><p id="servings">${recipe.servings}</p></article>
+      <article><i class="fas fa-tasks difficulty-icon"></i><h5>difficulty</h5><p>${recipe.difficulty}</p></article>
     
     `;
   quickFacts.appendChild(recipeIcons);
@@ -129,10 +129,10 @@ function showRecipe(recipe) {
   nutritionContainer.className = "recipe-nutrition";
   nutritionContainer.innerHTML = `
     
-        <div class="nutrition-item"><i class="fas fa-fire"></i><h5>Calories</h5><p>${recipe.nutritionalInfo.calories}</p></div>
-        <div class="nutrition-item"><i class="fas fa-drumstick-bite"></i><h5>Protein</h5><p>${recipe.nutritionalInfo.protein}</p></div>
-        <div class="nutrition-item"><i class="fas fa-bread-slice"></i><h5>Carbohydrate</h5><p>${recipe.nutritionalInfo.carbohydrates}</p></div>
-        <div class="nutrition-item"><i class="fas fa-bacon"></i><h5>Fat</h5><p>${recipe.nutritionalInfo.fat}</p></div>
+        <div class="nutrition-item"><i class="fas fa-fire calory-icon"></i><h5>Calories</h5><p>${recipe.nutritionalInfo.calories}</p></div>
+        <div class="nutrition-item"><i class="fas fa-drumstick-bite protein-icon"></i><h5>Protein</h5><p>${recipe.nutritionalInfo.protein}</p></div>
+        <div class="nutrition-item"><i class="fas fa-bread-slice carbo-icon"></i><h5>Carbohydrate</h5><p>${recipe.nutritionalInfo.carbohydrates}</p></div>
+        <div class="nutrition-item"><i class="fas fa-bacon fat-icon"></i><h5>Fat</h5><p>${recipe.nutritionalInfo.fat}</p></div>
    
       `;
 
